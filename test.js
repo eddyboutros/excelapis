@@ -37,6 +37,13 @@ app.get('/readExcelData/:fileName', function (req, res) {
   });
 });
 
-app.listen(8080, function () {
+/*for local server*/
+/*app.listen(8080, function () {
   console.log('Server is running on 8080');
+});*/
+
+/*process.env.PORT is for render.com. Environment variable PORT is created*/
+const port = process.env.PORT;
+app.listen(port, function () {
+  console.log('Server is running on ' + port);
 });
